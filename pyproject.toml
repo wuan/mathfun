@@ -27,7 +27,8 @@ dependencies = [
 tests = [
     'pytest-cov',
     'mock',
-    'assertpy'
+    'assertpy',
+    'flake8'
 ]
 
 [project.urls]
