@@ -39,7 +39,7 @@ jobs:
         pytest --cov=mathfun --cov-report=term --cov-report=xml
     - name: Get Cover
       uses: orgoro/coverage@v3.1
-      if: github.event.pull_request.base.ref == 'main'
+      if: matrix.python-version == '3.11' && github.event.pull_request.base.ref == 'main'
       with:
           coverageFile: coverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
